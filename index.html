@@ -1,1 +1,48 @@
-
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Menu Tracker</title>
+	<link rel="stylesheet" href="menu.css">
+	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+	<script src="app(st_data_dcl.js"></script>
+</head>
+<body>
+	<marquee class ="res">Barbeque Restaurant , Delhi</marquee>
+    <marquee class="res1">Savour delectable cuisine in charming surroundings.</marquee> 
+    <center>
+        <marquee class="res2" direction ="down" width="500" height="100" behaviour="alternate">
+            <marquee class ="res3" behaviour ="alternate">On Diwali Eve! - You will get 20% discount</marquee>
+        </marquee>
+    </center>  
+	<h1>SRK's Resto</h1>
+	<form onsubmit="addData(event)">
+		<label for="name">Name   : </label>
+		<input type="text" id="name" name="name" required><br><br>
+		<label for="dish">Dish   : </label>
+		<input type="text" id="dish" name="dish" required><br><br>
+		<label for="price">Price   : </label>
+		<input type="number" id="price" name="price" required><br><br>
+		<label for="table">Table Number   : </label>
+		<select id="table" name="table" required>
+			<option value="">Select table number</option>
+			<option value="1">Table 1</option>
+			<option value="2">Table 2</option>
+			<option value="3">Table 3</option>
+		</select><br><br>
+		<input type="submit" value="Add Data">
+	</form>
+	<table>
+		<thead>
+			<tr>
+				<th> Name   </th>
+				<th> Dish   </th>
+				<th> Price  </th>
+				<th> Table  </th>
+				<th> Edit   </th>
+				<th> Delete </th>
+			</tr>
+		</thead>
+		<tbody id="data"></tbody>
+	</table>
+</body>
+</html>
